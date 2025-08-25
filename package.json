@@ -1,0 +1,22 @@
+{
+  "name": "dstore",
+  "version": "0.1.0",
+  "description": "A data storage server.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "user-1344",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^5.1.0"
+  },
+  "bugs": {
+    "url": "https://github.com/user1344-gh/DStore/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/user1344-gh/DStore.git"
+  }
+}

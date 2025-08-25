@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload</title>
+</head>
+<body>
+    <h1>Upload data</h1>
+    <form action="upload_data.json" method="post">
+        <label for="name">Name</label> <br/>
+        <input type="text" placeholder="Name" id="name" name="name" required="true"/> <br/>
+        <label for="data">Data</label> <br/>
+        <textarea cols="50" rows="15" placeholder="Data here" id="data" name="data" required="true"></textarea> <br/>
+        <label for="password">Password</label> <br/>
+        <input type="password" placeholder="Data password" id="password" name="password"  required="true"/> <br/>
+        <button type="submit">Upload</button>
+    </form>
+</body>
+</html>
