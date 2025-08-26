@@ -3,6 +3,8 @@ const fs = require("fs");
 
 const upload = require("./upload.js");
 const retrieve = require("./retrieve.js");
+const file = require("./file.js");
+const { get } = require("http");
 
 fs.mkdir("./datastore", function(){});
 
@@ -17,10 +19,9 @@ server.use(express.urlencoded());
 
 server.use(function(req, res){
     console.log(`Recieved ${req.method} request for ${req.path}`);
-    if (req.path == "/" || req.path == "/index.html"){
-        res.writeHead(200, {"content-type": "text/html"});
-        res.write(fs.readFileSync("./pages/index.html"));
-        res.end();
+    if (file.process(req.path).exists){
+        const processResult = file.process(req.path);
+        res.sendFile(processResult.path,);
     } else if (req.path == "/retrieve.html"){
         res.writeHead(200, {"content-type": "text/html"});
         res.write(fs.readFileSync("./pages/retrieve.html"));
